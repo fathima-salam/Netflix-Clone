@@ -1,0 +1,379 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+}
+
+.hero_caption {
+    position: absolute;
+    width: 100%;
+    padding-left: 6%;
+    bottom: 10%;
+    color: white;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tagline {
+    max-width: 600px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e5e5e5;
+    line-height: 1.4;
+}
+
+.movie-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.movie-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.hero-btns .btn {
+    border: 0;
+    outline: 0;
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btns .btn img {
+    width: 25px;
+}
+
+.hero-btns .btn.dark-btn {
+    color: #fff;
+    background: rgba(109, 109, 110, 0.7);
+}
+
+.hero-btns .btn.fav-btn {
+    color: #fff;
+    background: #ff0000;
+}
+
+.hero-btns .btn:hover {
+    background: rgba(255, 255, 255, 0.75);
+    transform: scale(1.05);
+}
+
+.hero-btns .btn.dark-btn:hover {
+    background: rgba(109, 109, 110, 0.4);
+}
+
+.hero-btns .btn.fav-btn:hover {
+    background: #cc0000;
+}
+
+.movie-container {
+    background: #141414;
+    padding: 40px 6%;
+    min-height: 50vh;
+}
+
+.details {
+    background: #141414;
+    min-height: 100vh;
+}
+
+.movie-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-poster {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e50914;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detail-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 25px;
+    border-left: 4px solid #e50914;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.overview {
+    color: #b3b3b3;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.genre-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.genre-tag {
+    background: #e50914;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.genre-tag:hover {
+    background: #f40612;
+    transform: scale(1.05);
+}
+
+.release-date {
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.production-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.production-list li {
+    color: #b3b3b3;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 20px;
+}
+
+.production-list li:last-child {
+    border-bottom: none;
+}
+
+.production-list li:before {
+    content: "•";
+    color: #e50914;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.homepage-link {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.homepage-link:hover {
+    color: #f40612;
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .hero_caption {
+        padding-left: 4%;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .movie-container {
+        padding: 30px 4%;
+    }
+    
+    .movie-card {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .movie-info {
+        font-size: 0.9rem;
+        gap: 15px;
+    }
+    
+    .hero-btns .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .hero-btns .btn img {
+        width: 20px;
+    }
+    
+    .movie-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .movie-poster {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
+    }
+    
+    .movie-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+    }
+    
+    .hero-btns .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+        gap: 5px;
+    }
+    
+    .hero-btns .btn img {
+        width: 15px;
+    }
+    
+    .movie-container {
+        padding: 20px 4%;
+    }
+    
+    .detail-section {
+        padding: 20px;
+    }
+    
+    .genre-tag {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+}
+
+
+.fav-btn.in-wishlist {
+  background-color: #46d369;
+  border-color: #46d369;
+}
+
+.fav-btn.in-wishlist:hover {
+  background-color: #369654;
+  border-color: #369654;
+}
+
+.fav-btn {
+  transition: all 0.3s ease;
+  min-width: 180px; 
+}
+
+@media (max-width: 768px) {
+  .fav-btn {
+    min-width: 160px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fav-btn {
+    min-width: 140px;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
